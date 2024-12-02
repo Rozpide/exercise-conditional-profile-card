@@ -32,12 +32,8 @@ function render(variables = {}) {
   if (variables.name == null) name = "Your name";
   let lastName = variables.lastName;
   if (variables.lastName == null) lastName = "Your lastname";
-  let role = variables.role;
-  if (variables.role == null) role = "Web Developer";
-  let city = variables.city;
-  if (variables.city == null) city = "Miami";
-  let country = variables.country;
-  if (variables.country == null) country = "USA";
+  let socialMediaPosition = variables.socialMediaPosition;
+  if (variables.socialMediaPosition == "right") socialMediaPosition = "";
   let twitter = variables.twitter;
   if (variables.twitter == null) twitter = "";
   let github = `${variables.github}`;
@@ -46,8 +42,13 @@ function render(variables = {}) {
   if (variables.linkedin == null) linkedin = "";
   let instagram = variables.instagram;
   if (variables.instagram == null) instagram = "";
-  let socialMediaPosition = variables.socialMediaPosition;
-  if (variables.socialMediaPosition == "right") socialMediaPosition = "";
+  let role = variables.role;
+  if (variables.role == null) role = "Web Developer";
+  let city = variables.city;
+  if (variables.city == null) city = "Miami";
+  let country = variables.country;
+  if (variables.country == null) country = "USA";
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
